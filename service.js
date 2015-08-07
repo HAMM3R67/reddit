@@ -2,14 +2,7 @@ angular.module('reddit');
 app.service('FirebaseService', function($http, $q){
 	
 	this.getAllPosts = function(){
-		
-		//return $q(function(resolve, reject){
-		//	$.ajax({
-		//		method: 'GET',
-		//		url: 'https://devmtn.firebaseio.com/posts.json'
-		//	})
-		// })
-		
+				
 		// Below is the syntax for creating your own promise
 		
 		 var myPromise = $q(function(resolve, reject){
@@ -24,6 +17,15 @@ app.service('FirebaseService', function($http, $q){
 		//$http.get('https://devmtn.firebaseio.com/posts.json').then(function(response){
 		//		return response.data
 		//})
+		
+		// You can also do it without using the $http but $.ajax
+		
+		//return $q(function(resolve, reject){
+		//	$.ajax({
+		//		method: 'GET',
+		//		url: 'https://devmtn.firebaseio.com/posts.json'
+		//	})
+		// })
 	}
 	
 	
