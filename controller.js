@@ -13,5 +13,9 @@ app.controller('PostsController', function($scope, FirebaseService){
 		FirebaseService.addPost($scope.newPost)
 		.then($scope.getPosts)
 	}
+	
+	$scope.vote = function(post.id, direction){
+		FirebaseService.vote()
+	}
 
 })
