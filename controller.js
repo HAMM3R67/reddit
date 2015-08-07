@@ -1,9 +1,9 @@
-angular.module('reddit');
+var app = angular.module('reddit');
 app.controller('PostsController', function($scope, FirebaseService){
 	
-	$scope.getPosts(){
-		FirebaseService.getAllPosts().then(function(data){
-			$scope.posts = data
+	$scope.getPosts = function(){
+		FirebaseService.getAllPosts().then(function(posts){
+			$scope.posts = posts
 		});
 	}
 	

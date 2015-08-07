@@ -1,4 +1,4 @@
-angular.module('reddit');
+var app = angular.module('reddit');
 app.service('FirebaseService', function($http, $q){
 	
 	this.getAllPosts = function(){
