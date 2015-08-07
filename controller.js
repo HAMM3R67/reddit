@@ -1,4 +1,4 @@
 angular.module('app');
-app.controller('PostsController', function($scope){
+app.controller('PostsController', function($scope, FirebaseService){
 	
 })
