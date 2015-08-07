@@ -1,7 +1,7 @@
 angular.module('reddit');
 app.service('FirebaseService', function($http, $q){
 	
-	this.returnPosts = function(){
+	this.getAllPosts = function(){
 		return $q(function(resolve, reject){
 			$.ajax({
 				method: 'GET',
