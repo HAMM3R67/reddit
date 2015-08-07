@@ -1,7 +1,7 @@
 angular.module('app');
 app.service('FirebaseService', function($http, $q){
 	
-	this.getPosts = function(){
+	this.returnPosts = function(){
 		return $q(function(resolve, reject){
 			$.ajax({
 				method: 'GET',
