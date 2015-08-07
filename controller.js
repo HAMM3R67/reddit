@@ -11,6 +11,7 @@ app.controller('PostsController', function($scope, FirebaseService){
 	
 	$scope.addPost = function(){
 		FirebaseService.addPost($scope.newPost)
+		.then($scope.getPosts)
 	}
-	
+
 })

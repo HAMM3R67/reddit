@@ -26,8 +26,32 @@ app.service('FirebaseService', function($http, $q){
 		//		url: 'https://devmtn.firebaseio.com/posts.json'
 		//	})
 		// })
+		
+		// below is the addPost function that will add parts to the object
+		
 	}
-	
-	
+		
+		this.addPost = function(post){
+			post.timestamp = Date.now();
+			post.comments= [];
+			post.karma = 0;
+			post.id = guid();
+			
+			var url = 'https://devmtn.firebaseio.com/posts/' + post.id + '.json'
+			return $http.put(url, post)
+		}
+		
+		//The below function gives the post.id from the guid function a unique id
+		
+		var guid = function() {
+    		var s4 = function() {
+      		return Math.floor((1 + Math.random()) * 0x10000)
+        	.toString(16)
+       	 	.substring(1);
+    	}	
+	    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+	      s4() + '-' + s4() + s4() + s4();
+  		}
+
 	
 })
