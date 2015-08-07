@@ -1,4 +1,4 @@
-angular.module('app');
+angular.module('reddit');
 app.service('FirebaseService', function($http, $q){
 	
 	this.returnPosts = function(){

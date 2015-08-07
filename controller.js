@@ -1,4 +1,4 @@
-angular.module('app');
+angular.module('reddit');
 app.controller('PostsController', function($scope, FirebaseService){
 	
 	$scope.getPosts(){
