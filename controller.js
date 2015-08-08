@@ -14,8 +14,9 @@ app.controller('PostsController', function($scope, FirebaseService){
 		.then($scope.getPosts)
 	}
 	
-	$scope.vote = function(post.id, direction){
-		FirebaseService.vote()
-	}
+	//$scope.vote = function(post.id, direction){
+	//	FirebaseService.vote($scope.post.commentForm)
+	//	.then($scope.getPosts)
+	//}
 
 })

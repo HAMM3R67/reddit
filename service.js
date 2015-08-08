@@ -52,6 +52,16 @@ app.service('FirebaseService', function($http, $q){
 	    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
 	      s4() + '-' + s4() + s4() + s4();
   		}
+		  
+		this.vote = function(votes, direction){
+			if(direction === 'up'){
+				karma++;
+			} else if(direction === 'down'){
+				karma--;
+			}
+			var url = 'https://devmtn.firebaseio.com/posts/' + post.id + '.json'
+			return $http.patch(url, votes)
+		}
 
 	
 })
