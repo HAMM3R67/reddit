@@ -53,7 +53,8 @@ app.service('FirebaseService', function($http, $q){
 	      s4() + '-' + s4() + s4() + s4();
   		}
 		  
-		this.vote = function(votes, direction){
+		
+		this.vote = function(post.id, direction){
 			if(direction === 'up'){
 				karma++;
 			} else if(direction === 'down'){
